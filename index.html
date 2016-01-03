@@ -8,21 +8,44 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <script src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
-<!--script src="https://yastatic.net/bootstrap/3.3.4/js/bootstrap.min.js"></script-->
-<script src="calc-script.js"></script>
 </head>
 <body>
+<div class="top-panel">
+	<div class="container">
+		<div class="row">
+			<div id="logo" class="col-md-4 col-sm-3 col-xs-12"><a href="http://artlenk.ru/" target="_blank"><img src="http://artlenk.ru/theme/img/logo-3.png" alt="Логотип сайта ArtLenk.ru"></a></div>
+			<nav class="col-md-8 col-sm-9 col-xs-12">
+				<div class="dt-menu-toggle clearfix"> Меню сайта <span class="glyphicon glyphicon-tasks"></span></div>
+				<ul class="menu">
+					<li class="menu-parent"> <a href="http://artlenk.ru/services-and-prices/">Услуги и цены</a>
+						<ul class="menu-dropdown">
+							<li> <a href="http://artlenk.ru/services-and-prices/layout-site">Верстка сайтов</a> </li>
+							<li> <a href="http://artlenk.ru/services-and-prices/design-site">Дизайн сайта</a> </li>
+							<li> <a href="http://artlenk.ru/services-and-prices/programming-cms-modx-revolution">Программирование</a> </li>
+							<li> <a href="http://artlenk.ru/services-and-prices/correct-errors-site">Исправление ошибок</a> </li>
+							<li> <a href="http://artlenk.ru/services-and-prices/support-administration">Администрирование сайтов</a> </li>
+						</ul>
+					</li>
+					<li> <a href="http://artlenk.ru/portfolio/">Портфолио</a> </li>
+					<li> <a href="http://artlenk.ru/about-us">О нас</a> </li>
+					<li> <a href="http://artlenk.ru/otzyivyi-klientov">Отзывы</a> </li>
+					<li> <a href="http://artlenk.ru/news/">Новости</a> </li>
+					<li> <a href="http://artlenk.ru/contacts">Контакты</a> </li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+
 <div class="container">
-  <div class="row">
-		<div class="col-xs-6 col-xs-offset-3">
+	<div class="row">
+		<div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-2">
 			<form class="calculator">
 				<div class="form-group">
-					<input type="text" class="form-control input-lg" id="counting-result" value="0">
-				</div>
+					<input type="text" class="form-control input-lg" id="counting-result" value="0"> </div>
 				<div class="form-group">
 					<div id="counting-result2"></div>
-					<input type="text" class="form-control input-sm" id="board-calculator" value="">
-				</div>
+					<input type="text" class="form-control input-sm" id="board-calculator" value=""> </div>
 				<div class="button-calc clearfix">
 					<div class="btn btn-default" data-constant="SIN" data-key="115">sin</div>
 					<div class="btn btn-default" data-constant="COS" data-key="99">cos</div>
@@ -48,11 +71,10 @@
 					<div class="btn btn-default" data-key="46">.</div>
 					<div class="btn btn-danger" data-method="reset" data-key="27" title="Удалить результат и историю">CE</div>
 					<div class="btn btn-primary" data-method="equally" data-key="13">=</div>
-					
 				</div>
 			</form>
 		</div>
-		<div class="col-xs-3">
+		<div class="col-md-4 col-sm-4 col-xs-12">
 			<div id="history-panel">
 				<legend>История</legend>
 				<div id="calc-history">
@@ -60,66 +82,11 @@
 				</div>
 			</div>
 		</div>
-  </div>
+	</div>
 </div>
 
-<script>
-
-	
-	
-	
-	
-	/*
-	window.onload = function () {
-		var two,three,fo,fight,six,seven,eight,nine,zero,plus,minus;
-
-		var boardCalculator = document.getElementById('board-calculator');
-		var equally = document.getElementById("equally");
-		var plus = document.getElementById("plus");
-		var plus2 = plus.getAttribute('data-value');
-
-
-		var one = document.getElementById("one");
-		var one2 = parseInt(one.getAttribute('data-value'));
-
-		//вешаем на него событие
-		one.onclick = function() {
-			boardCalculator.value += one2;
-		}
-		plus.onclick = function() {
-			boardCalculator.value += plus2;
-		}
-		
-		equally.onclick = function() {
-			alert(boardCalculator.value);
-			var test = boardCalculator.value;
-			boardCalculator.value = test;
-		}
-		
-		
-		
-		
-		
-		one.addEventListener("click", function(e) {
-			boardCalculator.value = one2;
-		});
-		plus.addEventListener("click", function(e) {
-			boardCalculator.value = plus2;
-		});
-	
-		
-	}
-	
-	var passateCode, copyCode;
-
-	document.getElementById("submit").addEventListener("click", function() {
-	  passateCode = document.getElementById('passate-code').value;
-	  copyCode = passateCode.replace(/(\s*class=".*?"\s*)|(\s*data-bem=".*?"\s*)|(\s*role=".*?"\s*)|(\s*type=".*?"\s*)/gm, '');
-
-	  document.getElementById('copy-code').value = copyCode;
-	});
-*/
-</script>
+<script src="https://yastatic.net/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="calc-script.js"></script>
 
 </body>
 </html>

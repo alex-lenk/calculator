@@ -138,5 +138,7 @@ $(document).ready(function() {
 });
 
 
-
-
+/* This code does not relate to the calculator. */
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})

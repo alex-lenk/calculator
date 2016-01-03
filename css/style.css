@@ -63,3 +63,164 @@
 	  background-color: #ffffff;
 	  border-color: #ccc;
 	}
+
+
+
+
+
+
+
+
+
+/* 
+
+This CSS code is not relevant to the calculator.
+
+*/
+
+.top-panel {
+    width: 100%;
+    top: 0;
+    padding: 20px 0;
+    position: relative;
+    z-index: 90;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff', GradientType=0);
+}
+.top-panel.down-scroll {
+    background: #ffffff
+}
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: right
+}
+.menu li {
+    margin: 0 0 0 15px;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    text-transform: uppercase;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent
+}
+.menu li ul {
+    display: none;
+    top: 36px;
+    border-color: #000;
+    left: 0;
+    padding: 10px 0;
+    margin: 0;
+    position: absolute;
+    background-color: #fff;
+    width: 236px;
+    z-index: 1;
+    text-align: left;
+    border-bottom: 3px solid;
+    box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.15) inset;
+    -moz-box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.15) inset;
+    -webkit-box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.15) inset;
+    -o-box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.15) inset;
+    -ms-box-shadow: 0 3px 6px -2px rgba(0, 0, 0, 0.15) inset
+}
+.menu li ul li {
+    display: block;
+    text-transform: none
+}
+.menu a,
+.menu span {
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    outline: none;
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 13px
+}
+.menu li:hover ul {
+    display: block;
+    -webkit-animation: .3s ease-in fadeInUp;
+    -moz-animation: .3s ease-in 0 fadeInUp;
+    animation: .3s ease-in 0 fadeInUp
+}
+.menu > li:hover,
+.menu > li.active {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+.dt-menu-toggle {
+    display: none;
+    background-color: #333234;
+    color: #fff;
+    text-align: left;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    cursor: pointer
+}
+.dt-menu-toggle span {
+    margin: 0 0 0 15px;
+    float: right
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .top-panel {
+        padding: 5px 0
+    }
+    .dt-menu-toggle {
+        display: block
+    }
+    .menu {
+        display: none
+    }
+    .open_menu {
+        display: block;
+        text-align: left;
+        background: #ffffff;
+    }
+    .open_menu li {
+        display: block;
+        margin: 0 0 5px 15px
+    }
+    .menu li {
+        position: relative
+    }
+    .menu li:hover ul {
+        display: none
+    }
+    .menu li.hover li {
+        display: block
+    }
+    .menu .menu-parent:before {
+        content: "+";
+        position: absolute;
+        top: 0;
+        right: 15px;
+        cursor: pointer;
+        font-size: 20px
+    }
+    .menu li ul.open_dropdown {
+        display: block;
+        position: relative;
+        padding: 0;
+        top: 0;
+        background-color: #fff;
+        border-bottom: none;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) inset;
+        -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) inset;
+        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) inset;
+        -o-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) inset;
+        -ms-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) inset
+    }
+}
