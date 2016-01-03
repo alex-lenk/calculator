@@ -95,25 +95,28 @@ var Calculator = {
 	}
 };
 
+
 $(document).keypress(function(e) {
-  var element = $('*[data-key="'+e.which+'"]');
+  var element = $('*[data-key="' + e.which + '"]');
 
-  var fun = function(element){
+  var fun = function(element) {
     // skip if this is no a functional button
-    if (element.length == 0){ return true }
+    if (element.length === 0) {
+      return true
+    }
 
-    if (element.data('constant') != undefined){
+    if (element.data('constant') !== undefined) {
       return Calculator.put(Calculator[element.data('constant')]);
     }
 
-    if (element.data('method') != undefined){
+    if (element.data('method') !== undefined) {
       return Calculator[element.data('method')]();
     }
 
     return Calculator.put(element.html());
   }
 
-  if (fun(element) != false){
+  if (fun(element) !== false) {
     return false
   } else {
     return true
@@ -125,11 +128,11 @@ $(document).ready(function() {
   $(".btn").click(function(e) {
     e.preventDefault();
 
-    if ($(this).data('constant') != undefined){
+    if ($(this).data('constant') !== undefined) {
       return Calculator.put(Calculator[$(this).data('constant')]);
     }
 
-    if ($(this).data('method') != undefined){
+    if ($(this).data('method') !== undefined) {
       return Calculator[$(this).data('method')]();
     }
 
@@ -137,8 +140,7 @@ $(document).ready(function() {
   });
 });
 
-
 /* This code does not relate to the calculator. */
 $(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+  $('[data-toggle="tooltip"]').tooltip();
+});
