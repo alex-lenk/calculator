@@ -43,7 +43,7 @@ var Calculator = {
 		this.updateMemory();
 	},
 	updateResult: function () {
-		document.getElementById(this.resultsId).innerHTML = this.resultsValue;
+		document.getElementById(this.resultsId).value = this.resultsValue;
 	},
 	updateMemory: function () {
 		document.getElementById(this.memoryId).value = this.memoryValue;

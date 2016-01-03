@@ -6,21 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Калькулятор</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
 <script src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
 <!--script src="https://yastatic.net/bootstrap/3.3.4/js/bootstrap.min.js"></script-->
 <script src="calc-script.js"></script>
-<style>
-	.button-calc .btn {
-		width: 23%;
-		display: block;
-		float: left;
-		padding: 0;
-		margin: 0 1% 5px;
-		font-size: 18px;
-		padding: 12px 0;
-	}
-	#history-panel {margin: 50px 0 0;}
-</style>
 </head>
 <body>
 <div class="container">
@@ -28,14 +17,17 @@
 		<div class="col-xs-6 col-xs-offset-3">
 			<form class="calculator">
 				<div class="form-group">
-					<label for="board-calculator2"><div id="counting-result">0</div></label>
-					<input type="text" class="form-control input-lg" id="board-calculator" value="">
+					<input type="text" class="form-control input-lg" id="counting-result" value="0">
+				</div>
+				<div class="form-group">
+					<div id="counting-result2"></div>
+					<input type="text" class="form-control input-sm" id="board-calculator" value="">
 				</div>
 				<div class="button-calc clearfix">
 					<div class="btn btn-default" data-constant="SIN" data-key="115">sin</div>
 					<div class="btn btn-default" data-constant="COS" data-key="99">cos</div>
 					<div class="btn btn-default" data-constant="MOD" data-key="109">md</div>
-					<div class="btn btn-default"> &nbsp; </div>
+					<div class="cat btn-default" data-toggle="tooltip" data-placement="top" title="Изюминка =)"> &nbsp; </div>
 					<div class="btn btn-default" data-constant="BRO" data-key="40">(</div>
 					<div class="btn btn-default" data-constant="BRC" data-key="41">)</div>
 					<div class="btn btn-default" data-constant="PERC" data-key="37">%</div>
@@ -54,7 +46,7 @@
 					<div class="btn btn-default" data-constant="MIN" data-key="45">−</div>
 					<div class="btn btn-default" data-key="48">0</div>
 					<div class="btn btn-default" data-key="46">.</div>
-					<div class="btn btn-danger" data-method="reset" data-key="27">CE</div>
+					<div class="btn btn-danger" data-method="reset" data-key="27" title="Удалить результат и историю">CE</div>
 					<div class="btn btn-primary" data-method="equally" data-key="13">=</div>
 					
 				</div>
